@@ -1,0 +1,280 @@
+/* Defines how the width and height of the element are calculated: whether they include the padding and borders or not. */
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/*------------*/
+
+body {
+	background-color: #f1f1f1;
+	color: #444;
+	font-family: "Open Sans", "Arial", sans-serif;
+	font-weight: 400;
+	line-height: 1.4;
+	font-size: 1em;
+}
+h1, h2 {
+	font-weight: 800;
+	text-transform: uppercase;
+	max-width: 90%;
+	margin: 0 auto;
+	line-height: 1.15;
+	text-align: center;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+a {
+	color: red;
+	text-decoration: none;
+}
+a:hover,
+a:visited {
+	color: orange;
+}
+input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+label {
+	display: block;
+	font-size: 0.85em;
+	text-transform: uppercase;
+}
+button, .button {
+	border: none;
+	border-radius: 5px;
+	background: orange;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 25px;
+	display: block;
+	margin: 0 auto;
+	max-width: 250px;
+	font-weight: 700;
+}
+section {
+	padding: 20px 0;
+}
+section h2 {
+	margin: 20px;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
+}
+.wrapper:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.header {
+	color: #fff;
+	position: relative;
+	text-align: center;
+}
+.logo {
+	width: 171px;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	text-align: left;
+}
+.logo img {
+	width: 70px;
+	margin-right: 10px;
+	float: left;
+}
+.logo p {
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 5px 0;
+	position: relative;
+	top: 10px;
+}
+.navigation {
+	position: absolute;
+	top: 130px;
+	left: 0;
+	width: 100%;
+}
+.navigation_item {
+	display: inline-block;
+}
+.navigation_item a {
+	text-transform: uppercase;
+	color: #fff;
+	padding: 10px;
+}
+.header h1 {
+	max-width: 90%;
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	font-size: 1.5em;
+}
+.header h1 span {
+	font-size: 3em;
+	display: block;
+}
+.section-center {
+	position: relative;
+}
+.centered-all {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.column {
+	margin: 10px;
+}
+.column-title {
+	margin: 20px 0;
+	padding: 10px 0 10px 30px;
+}
+.column-title:before {
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+	position: absolute;
+	top: 0;
+	content: "";
+	left: 0;
+}
+.mission-title:before {
+	background: url(../img/17-astronaut.svg) no-repeat;
+	background-size: 100% auto;
+}
+.why-title:before {
+	background: url(../img/2-earth.svg) no-repeat;
+	background-size: 100% auto;
+}
+.when-title:before {
+	background: url(../img/33-rocket-start.svg) no-repeat;
+	background-size: 100% auto;
+}
+.make-history {
+	color: #fff;
+}
+.pilgrim {
+	margin-bottom: 25px;
+}
+.pilgrim-image {
+	float: left;
+	overflow: hidden;
+	border-radius: 50%;
+	width: 100px;
+	margin-right: 25px;
+	transition: all 250ms ease-in-out;
+}
+.pilgrim-image:hover {
+	border-radius: 0;
+}
+.pilgrim-name {
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+blockquote {
+	position: relative;
+}
+blockquote:before {
+	content: "";
+	background: url(..img/quote.svg) no-repeat;
+	display: block;
+	width: 40px;
+	background-size: 100% auto;
+	opacity: 0.5;
+}
+.join-form {
+	background: #fff;
+	max-width: 90%;
+	padding: 25px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+.join-form h2 {
+	color: #444;
+}
+.input-box {
+	margin-bottom: 20px;
+}
+.join-button {
+	float: right;
+}
+textarea {
+	width: 100%;
+	height: 200px;
+}
+@media screen and (min-width: 800px) {
+
+	.column {
+		margin: 0;
+		float: left;
+		width: 30%;
+		margin-left: 5%;
+	}
+	.column:first-child {
+		margin-left: 0;
+	}
+	.join-form .column,
+	#pilgrims .column {
+		float: left;
+		width: 45%;
+		margin-left: 10%;
+	}
+	#pilgrims .column:first-child {
+		margin-left: 0;
+	}
+
+	.logo {
+		position: static;
+		float: left;
+	}
+	.navigation {
+		width: 400px;
+		text-align: right;
+		float: right;
+		position: static;
+		margin: 15px 0;
+	}
+	.header .wrapper {
+		position: absolute;
+		left: 50%;
+		top: 20px;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.header h1,
+	.centered-all {
+		max-width: 75%;
+	}
+	.header h1 {
+		font-size: 2em;
+	}
+
+}
+@media screen and (min-width: 1000px) {
+	.header h1,
+	.centered-all {
+		max-width: 60%;
+	}
+
+}
+
+
+
+
